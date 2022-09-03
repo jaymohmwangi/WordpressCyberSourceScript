@@ -1,0 +1,14 @@
+<?php
+
+define('MERCHANT_ID', 'ecomr004802');
+define('PROFILE_ID', '1C289A82-63B8-4CC6-811F-087FFB43C49B');
+define('ACCESS_KEY', '68e93547d5553658a4cad8fe62aa03b6');
+define('SECRET_KEY', '670c83a72d8647b3aef02a67295a32fe63fd085a7b634458a654bc0ef654b05b7401791c1c4940629129372af1849b36189ab76203164e5c98a693a0aa30d221bb7e40e3a6914784b17a72ee1a7efbf15c302beb1d3d459a901156574bcce3b9f4c674fb1e64452e9571f973938d5e67d9e880ff55e74a8b8788470748394c4d');
+define('HMAC_SHA256', 'sha256');
+
+define('CYBS_BASE_URL', 'https://secureacceptance.cybersource.com');
+define('PAYMENT_URL', CYBS_BASE_URL . '/pay');
+
+define('TOKEN_CREATE_URL', CYBS_BASE_URL . '/token/create');
+define('TOKEN_UPDATE_URL', CYBS_BASE_URL . '/token/update');
+
