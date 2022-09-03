@@ -38,11 +38,7 @@ class paymentController{
         if(property_exists($payment,'status') && $payment->status==="PAID"):
             header('Location:'.$payment->cancel_return);
         endif;
-        //invoice id
-        //return_url
-        //cancel_return
-        //cancel_return
-        //notify_url
+       //build form post data
         $params['access_key'] = ACCESS_KEY;
         $params['profile_id'] = PROFILE_ID;
         $params['transaction_uuid'] = uniqid();
@@ -61,7 +57,7 @@ class paymentController{
         $params['bill_to_address_city'] = $get->city;
         $params['bill_to_address_state'] = $get->state;
         $params['bill_to_address_postal_code'] = $get->zip;
-        $params['override_custom_receipt_page'] = "https://cybersource.intrepid.co.ke/ipn.php";
+        $params['override_custom_receipt_page'] =  "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']."/ipn.php";
         $params['device_fingerprint_id'] = session_id();
         $params['customer_ip_address'] = @$_SERVER['REMOTE_ADDR'];
         $params['amount'] = $get->amount;

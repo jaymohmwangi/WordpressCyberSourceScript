@@ -3,9 +3,9 @@
         
      protected function connect(){
 
-        $servername = "167.99.248.146";
-        $username = "wigo_wallet";
-        $password = '[aFM$D](tDt{';
+        $servername = "localhost";
+        $username = "root";
+        $password = '';
         $dbname = "cybersource";
 
         try {
